@@ -39,8 +39,8 @@ public class DataProcessorTest {
         inputData.add(new OutputDataEntity(13000, "example.com/csv1", 1, "13000_key1,13000_key2", 454));
         inputData.add(new OutputDataEntity(13001, "example.com/csv2", 0, "EMPTY_KEY_WORDS", 455));
 
-        DataProcessor.write("src/test/resources/output/output.txt",inputData);
-        File outfile = new File("src/test/resources/output/output.txt");
+        DataProcessor.write("src/test/resources/output.txt",inputData);
+        File outfile = new File("src/test/resources/output.txt");
         Assert.assertNotEquals(outfile.length(), 0);
         outfile.delete();
     }
